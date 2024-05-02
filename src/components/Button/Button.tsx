@@ -8,10 +8,20 @@ interface ButtonProps {
     color?: string
     borderRadius?: number
     padding?: string
+    fontSize?: number
+    fontWeight?: 'normal' | 'bold'
 }
 
-export const Button: FC<ButtonProps> = ({ children, backgroundColor = '#fff',  color = '#000', borderRadius = 0, padding = '15px 30px' }) => {
-    return(
-        <button className="btn" style={{backgroundColor, color, borderRadius, padding}}>{children}</button>
+export const Button: FC<ButtonProps> = ({
+    children,
+    backgroundColor = '#fff',
+    color = '#000',
+    borderRadius = 0,
+    padding = '15px 30px',
+    fontSize = 18,
+    fontWeight = 'normal'
+}) => {
+    return (
+        <button className="btn" style={{ backgroundColor, color, borderRadius, padding, fontSize, fontWeight }}>{children}</button>
     )
 }
