@@ -26,8 +26,19 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
+    backgroundColor: '#fff',
+    color: "#000",
+    padding: '10px 25px',
     children: 'Кнопка7'
-    // primary: true,
-    // label: 'Button',
+  },
+};
+
+export const Radius: Story = {
+  args: {
+    backgroundColor: '#fff',
+    color: "#000",
+    borderRadius: 30,
+    padding: '10px 25px',
+    children: 'Кнопка7'
   },
 };
