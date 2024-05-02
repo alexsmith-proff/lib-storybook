@@ -3,8 +3,11 @@ import { Button } from '../components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: any = {
-  title: 'Example/Button',
+  title: 'Example/Buttons/Button',
   component: Button,
+  parameters: {
+    layout: 'centered',
+  },
   // parameters: {
   //   // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
   //   layout: 'centered',
@@ -25,19 +28,22 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    backgroundColor: '#fff',
-    color: "#000",
-    padding: '10px 25px',
-    children: 'Кнопка7'
-  },
-};
-
-export const Radius: Story = {
-  args: {
-    backgroundColor: '#fff',
-    color: "#000",
-    borderRadius: 30,
-    padding: '10px 25px',
-    children: 'Кнопка7'
+    width: 120,
+    height: 40,
+    text: 'Кнопка',
+    textSize: 16,
+    textColor: '#FAFAFA',
+    textWeight: 'norm',
+    textNoWrap: true,
+    isComponentLeft: true,
+    gap: 0, // расстояние между текстом и компонентом
+    backgroundColor: '#0B1331',
+    textColorHover: '#0B1331',
+    backgroundColorDisable: 'rgba(11, 19, 49, 0.6)',
+    borderRadius: 0,
+    transitionHover: '.3s',
+    padding: '10px 35px',
+    isEnable: true,
+    isFocusEnable: true,
   },
 };
