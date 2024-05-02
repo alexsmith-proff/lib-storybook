@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 
+import './Button.css'
+
 interface ButtonProps {
     children: React.ReactNode
     backgroundColor?: string
@@ -8,10 +10,8 @@ interface ButtonProps {
     padding?: string
 }
 
-const Button: FC<ButtonProps> = ({ backgroundColor = '#fff',  color = '#000', borderRadius = 0, padding = '15px 30px', children }) => {
+export const Button: FC<ButtonProps> = ({ children, backgroundColor = '#fff',  color = '#000', borderRadius = 0, padding = '15px 30px' }) => {
     return(
-        <button style={{backgroundColor, color, borderRadius, padding}}>{children}</button>
+        <button className="btn" style={{backgroundColor, color, borderRadius, padding}}>{children}</button>
     )
 }
-
-export default Button
