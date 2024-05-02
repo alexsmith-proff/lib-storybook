@@ -1,5 +1,14 @@
 {
-  "name": "lib-storybook",
+  "name": "@alexsmith-proff/lib-storybook",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/alexsmith-proff"
+  },
+  "main": "dist/esm/index.js",
+  "module": "dist/cjs/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "types": "dist/index.d.ts",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
